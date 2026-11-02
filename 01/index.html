@@ -4,6 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <style>
+   /* CSS: "버튼은 분홍색 바탕에 흰 글씨로" (모양) */
+    button { background: pink; color: white; } 
+  </style>
 </head>
 <body>
   <!-- HTML: "여기에 '좋아요'라는 버튼이 있다" (구조) -->
@@ -11,3 +15,8 @@
 
 </body>
 </html>
+<script>
+  // JavaScript: "버튼을 누르면 '고마워요!' 창을 띄워라" (동작)
+document.querySelector("button").addEventListener("click", () => alert("고마워요!"));
+
+</script>
