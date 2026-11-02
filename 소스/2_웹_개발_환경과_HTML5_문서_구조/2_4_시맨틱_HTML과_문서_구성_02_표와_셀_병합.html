@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>표와 셀 병합</title>
+</head>
+<body>
+  <!-- HTML 표와 데이터 표현 -->
+  <table>
+    <tr>
+      <th>이름</th>
+      <th>점수</th>
+    </tr>
+    <tr>
+      <td>홍길동</td>
+      <td>90</td>
+    </tr>
+  </table>
+
+  <!-- 행과 열, 셀 병합 (병합 결과가 보이도록 border 속성으로 테두리를 표시) -->
+  <table border="1">
+    <tr>
+      <td colspan="2">가로로 두 칸 병합</td>
+      <td rowspan="2">세로로 두 칸 병합</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>2</td>
+    </tr>
+  </table>
+</body>
+</html>

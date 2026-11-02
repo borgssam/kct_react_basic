@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>HTML 폼과 사용자 입력</title>
+</head>
+<body>
+  <form>
+    <!-- form과 label 요소 -->
+    <label for="username">이름</label>
+    <input type="text" id="username" name="username">
+    <hr>
+
+    <!-- text, password, email, number 입력 -->
+    <input type="text" placeholder="이름">
+    <input type="password" placeholder="비밀번호">
+    <input type="email" placeholder="you@example.com">
+    <input type="number" min="0" max="100">
+    <hr>
+
+    <!-- checkbox와 radio -->
+    <input type="checkbox" id="agree"> <label for="agree">동의합니다</label>
+
+    <input type="radio" name="gender" id="male"> <label for="male">남성</label>
+    <input type="radio" name="gender" id="female"> <label for="female">여성</label>
+    <hr>
+
+    <!-- select와 option -->
+    <select>
+      <option value="seoul">서울</option>
+      <option value="busan">부산</option>
+    </select>
+    <hr>
+
+    <!-- textarea와 button -->
+    <textarea rows="4" placeholder="여러 줄 입력"></textarea>
+    <button type="submit">제출</button>
+    <button type="button">그냥 버튼(제출 안 됨)</button>
+    <hr>
+
+    <!-- fieldset과 legend -->
+    <fieldset>
+      <legend>개인정보</legend>
+      <label for="name">이름</label>
+      <input type="text" id="name">
+    </fieldset>
+  </form>
+</body>
+</html>

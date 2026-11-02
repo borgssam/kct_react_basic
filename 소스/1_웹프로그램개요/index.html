@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* CSS: "버튼은 분홍색 바탕에 흰 글씨로" (모양) */
+        button {
+            background: pink;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>나의 첫 웹 페이지</h1>
+    <p>이 페이지는 HTML로 만들었습니다.</p>
+    <button>좋아요</button> <!-- 클릭 동작이 실제로 연결되어 있음 -->
+</body>
+
+</html>
+
+<script>
+    // JavaScript: "버튼을 누르면 '고마워요!' 창을 띄워라" (동작)
+    document.querySelector("button").addEventListener("click", () => alert("고마워요!"));
+</script>
