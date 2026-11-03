@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./3_5_css_박스2.css">
+
+</head>
+<body>
+  <h1>박스 모델과 주요 css속성 실습</h1>
+  <h2>display속성 (block, inline, inline-block)</h2>
+  <div class="display-container">    
+    <p><strong>block 요소:</strong>width/height가 먹히지만 혼자 한 줄을 다 차지합니다</p>
+    
+    <div class="box ">block 상자</div>
+    <div class="box box-inline">block 상자</div>
+    <span class="spanbox ">span 상자</span>
+    <span class="spanbox spanbox-block">span 상자</span>
+  
+  </div>
+  <hr>
+    <h2>2. overflow: auto (콘텐츠 넘침 시 스크롤바)</h2>
+  <div class="overflow-box">
+    여기는 내용이 아주 긴 박스입니다. 박스의 고정된 높이보다 글 내용이 더 많아지면, <code>overflow: auto</code> 속성 덕분에 상자 안에 자동으로 스크롤바가 생겨서 레이아웃이 깨지지 않고 깔끔하게 보호됩니다. 글을 계속 채워봅니다!
+  </div>
+
+  <hr>
+  <h2>3. border-radius &amp; box-shadow (카드 UI 디자인)</h2>
+  <div class="card">
+    <h3>모던한 카드 디자인</h3>
+    <p><code>border-radius: 12px</code>로 모서리를 둥글게 깎고, <code>box-shadow</code>로 은은한 입체감을 주어 실무에서 가장 많이 쓰이는 카드 형태를 완성했습니다.</p>
+  </div>
+
+  <br/><br/><br/><br/>
+
+</body>
+</html>

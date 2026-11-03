@@ -1,0 +1,56 @@
+    .display-container {
+      background-color: #fff;
+      padding: 20px;
+      border: 2px solid #ddd;
+      border-radius: 8px;
+      margin-bottom: 20px;
+    }
+
+    /* 공통 상자 스타일 */
+    .box {
+      
+      height: 60px;
+      background-color: #3b82f6;
+      color: white;
+      text-align: center;
+      line-height: 60px;
+      margin: 10px;
+      font-weight: bold;
+    }
+
+    .box-inline{
+      display:inline;
+      background-color: red;
+    }
+
+    .spanbox {
+      display: inline
+      background-color: blue;
+      margin: 10px;
+    }
+    .spanbox-block {
+      display: block;
+      background-color: green;
+    }
+
+    .overflow-box {
+      width: 250px;
+      height: 80px; /* 높이 고정 */
+      background-color: #fff;
+      border: 2px solid #333;
+      padding: 10px;
+      overflow: auto; /* 내용이 넘치면 자동으로 스크롤바 생성 */
+      border-radius: 8px;
+    }
+
+    .card{
+       width: 300px;
+       border: 2px solid #555;
+       background-color: beige;
+       padding: 20px;
+
+       margin: 0 auto;
+       border-radius: 20px;
+       box-shadow: -4px -4px 30px rgba(0,0,0,0.8);
+
+    }
