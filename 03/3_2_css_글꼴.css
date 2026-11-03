@@ -1,0 +1,16 @@
+/* font-family와 웹 글꼴 */
+body {
+  font-size: 16px;
+}
+.css_2rem {
+  font-size: 2rem;
+}
+
+.my1{
+  font-size: 1em;
+  color: blue;
+  background-color: yellow;
+  border: 1px solid red;
+  text-align:right;
+  line-height: 2;
+}
