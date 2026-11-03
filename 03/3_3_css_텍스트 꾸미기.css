@@ -1,0 +1,21 @@
+.tx1{letter-spacing: 2px; word-spacing: 4px;}
+.tx2{letter-spacing: 4px; word-spacing: 8px;}
+
+.a1{text-decoration: underline;}
+.a2{text-decoration: none;}
+
+.tupper{text-transform: uppercase;}
+div{background-color: antiquewhite; width: 400px;}
+.title{
+  white-space: nowrap;
+  overflow:hidden;
+  text-overflow: ellipsis;
+}
+
+p{background-color: cornsilk; font-size:16px}
+.tindent{
+  text-indent: 2em;
+}
+
+pre{background-color: aqua; width: 100;}
+.wspace{ white-space: pre-wrap}
