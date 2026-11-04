@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+
+    .demos { display: flex; flex-wrap: wrap; gap: 0 32px; }
+    
+    .container {
+      display: flex;
+      width: 260px;
+      height: 120px;
+      background: #f1f5f9;
+      border: 2px solid #334155;
+      flex-direction: row;
+    }
+
+    .item{
+      width:60px;
+       height:50px; 
+      text-align:center;
+      background-color:  #0d9488;
+      color: white;
+      outline:1px solid whilte;
+    }
+
+    .strecth { align-items: flex-start;}
+    .stretch .item {height: auto;}
+
+    .start { align-items: flex-start;}
+    .center { align-items:center;}
+    .end { align-items: flex-end;}
+
+    .baseline{align-items: baseline;}
+    .big { font-size:32px;}
+
+  </style>
+</head>
+<body>
+  <div class="demos">
+    <div>
+      <p>stretch(기본)</p>
+      <div class="container stretch">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+      </div>
+    </div>
+
+    <div>
+      <p>flex-start</p>
+      <div class="container start">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+      </div>
+    </div>
+
+    <div>
+      <p>flex-center</p>
+      <div class="container center">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+      </div>
+    </div>
+
+    <div>
+      <p>flex-end</p>
+      <div class="container end">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+      </div>
+    </div>
+
+    <div>
+      <p>baseline</p>
+      <div class="container baseline">
+        <div class="item">1</div>
+        <div class="item big">2</div>
+        <div class="item">3</div>
+      </div>
+    </div>
+
+
+
+
+  </div>
+  
+</body>
+</html>
