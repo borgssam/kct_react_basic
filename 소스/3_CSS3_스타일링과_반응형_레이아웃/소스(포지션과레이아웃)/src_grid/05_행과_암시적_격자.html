@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>05 행과 암시적 격자</title>
+  <style>
+    .wrap { display: flex; gap: 32px; }
+    p { margin: 12px 0 6px; font-family: monospace; }
+
+    .container {
+      display: grid;
+      grid-template-columns: repeat(3, 80px);
+      background: #f1f5f9;
+      border: 2px solid #334155;
+    }
+    .item {
+      font-weight: bold;
+      text-align: center;
+      color: white;
+      background: #4f46e5;
+      outline: 1px solid white;
+    }
+
+    /* 행 2개만 정했는데 자식은 9개 → 3번째 행이 저절로 생긴다 */
+    .rows { grid-template-rows: 80px 40px; }
+
+    /* 저절로 생기는 행의 높이까지 정해 둔다 */
+    .auto-rows { grid-auto-rows: 60px; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div>
+      <p>grid-template-rows: 80px 40px</p>
+      <div class="container rows">
+        <div class="item">1</div><div class="item">2</div><div class="item">3</div>
+        <div class="item">4</div><div class="item">5</div><div class="item">6</div>
+        <div class="item">7</div><div class="item">8</div><div class="item">9</div>
+      </div>
+    </div>
+    <div>
+      <p>grid-auto-rows: 60px</p>
+      <div class="container auto-rows">
+        <div class="item">1</div><div class="item">2</div><div class="item">3</div>
+        <div class="item">4</div><div class="item">5</div><div class="item">6</div>
+        <div class="item">7</div><div class="item">8</div><div class="item">9</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

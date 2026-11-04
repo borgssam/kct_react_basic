@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>09 겹치기</title>
+  <style>
+    .card {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr;
+      width: 340px;
+      height: 200px;
+      border: 2px solid #334155;
+    }
+
+    /* 세 요소를 모두 같은 칸(1행 1열)에 놓으면 겹친다 */
+    .photo, .caption, .badge {
+      grid-area: 1 / 1;
+    }
+
+    .photo {
+      background: linear-gradient(135deg, #a5b4fc, #4f46e5);
+    }
+    .caption {
+      align-self: end; /* 칸의 아래쪽 */
+      padding: 10px;
+      color: white;
+      background: rgba(0, 0, 0, 0.6);
+    }
+    .badge {
+      justify-self: end; /* 칸의 오른쪽 */
+      align-self: start; /* 칸의 위쪽 */
+      margin: 8px;
+      padding: 2px 10px;
+      font-weight: bold;
+      color: white;
+      background: #dc2626;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="photo"></div>
+    <div class="caption">사진 위에 올린 설명</div>
+    <div class="badge">NEW</div>
+  </div>
+</body>
+</html>

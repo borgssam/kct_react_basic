@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>16 종합 실습</title>
+  <style>
+    body { margin: 0; background: #f1f5f9; }
+
+    /* 1. 페이지 전체: 위에서 아래로, 본문이 남는 높이를 차지 */
+    .page {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    /* 2. 머리글: 로고는 왼쪽, 메뉴는 오른쪽 */
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 20px;
+      color: white;
+      background: #1e293b;
+    }
+    .menu { display: flex; gap: 16px; }
+
+    /* 3. 가운데: 사이드바는 고정, 본문은 나머지 전부 */
+    .body { display: flex; flex: 1; }
+    .side {
+      flex: 0 0 120px;
+      padding: 16px;
+      background: #e2e8f0;
+    }
+    .main { flex: 1; padding: 16px; }
+
+    /* 4. 카드 목록: 자리가 모자라면 다음 줄로 */
+    .cards {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .card {
+      flex: 1 1 140px; /* 140px을 기본으로, 남으면 늘어난다 */
+      padding: 16px;
+      background: white;
+      border: 1px solid #cbd5e1;
+      border-radius: 8px;
+    }
+
+    /* 5. 꼬리글: 글자를 가운데로 */
+    .footer {
+      display: flex;
+      justify-content: center;
+      padding: 12px;
+      color: white;
+      background: #334155;
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header class="header">
+      <strong>보그쌤 쇼핑</strong>
+      <nav class="menu">
+        <span>상품</span>
+        <span>장바구니</span>
+        <span>로그인</span>
+      </nav>
+    </header>
+
+    <div class="body">
+      <aside class="side">분류</aside>
+      <main class="main">
+        <div class="cards">
+          <div class="card">상품 1</div>
+          <div class="card">상품 2</div>
+          <div class="card">상품 3</div>
+          <div class="card">상품 4</div>
+          <div class="card">상품 5</div>
+        </div>
+      </main>
+    </div>
+
+    <footer class="footer">꼬리글</footer>
+  </div>
+</body>
+</html>

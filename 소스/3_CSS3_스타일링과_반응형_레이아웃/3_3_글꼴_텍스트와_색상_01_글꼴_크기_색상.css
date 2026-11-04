@@ -1,0 +1,11 @@
+/* font-family와 웹 글꼴 */
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+/* 글자 크기와 글자 두께 */
+h1 { font-size: 2rem; font-weight: bold; }
+p { font-size: 1rem; font-weight: 400; }
+
+/* 글자 색상과 배경색 */
+p { color: #333333; background-color: #f5f5f5; }

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>13 flex-shrink</title>
+  <style>
+    p { margin: 12px 0 6px; font-family: monospace; }
+
+    .container {
+      display: flex;
+      width: 300px; /* 자식 합계 120px × 3 = 360px → 60px 모자란다 */
+      background: #f1f5f9;
+      border: 2px solid #334155;
+    }
+    .item {
+      width: 120px;
+      height: 50px;
+      line-height: 50px;
+      text-align: center;
+      font-weight: bold;
+      color: white;
+      background: #0d9488;
+      outline: 1px solid white;
+    }
+
+    .no-shrink { flex-shrink: 0; background: #dc2626; }
+    .shrink2   { flex-shrink: 2; background: #2563eb; }
+  </style>
+</head>
+<body>
+  <p>flex-shrink 없음 (기본값 1)</p>
+  <div class="container">
+    <div class="item">1</div>
+    <div class="item">2</div>
+    <div class="item">3</div>
+  </div>
+
+  <p>빨강만 flex-shrink: 0</p>
+  <div class="container">
+    <div class="item no-shrink">1</div>
+    <div class="item">2</div>
+    <div class="item">3</div>
+  </div>
+
+  <p>파랑만 flex-shrink: 2</p>
+  <div class="container">
+    <div class="item shrink2">1</div>
+    <div class="item">2</div>
+    <div class="item">3</div>
+  </div>
+
+  <p>모두 flex-shrink: 0 (넘친다)</p>
+  <div class="container">
+    <div class="item no-shrink">1</div>
+    <div class="item no-shrink">2</div>
+    <div class="item no-shrink">3</div>
+  </div>
+</body>
+</html>

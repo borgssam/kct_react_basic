@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>12 격자 정렬</title>
+  <style>
+    .demos { display: flex; flex-wrap: wrap; gap: 0 32px; }
+    p { margin: 12px 0 6px; font-family: monospace; }
+
+    .container {
+      display: grid;
+      /* 칸 합계 240 × 120, 컨테이너 340 × 200 → 공간이 남는다 */
+      grid-template-columns: repeat(3, 80px);
+      grid-template-rows: repeat(2, 60px);
+      width: 340px;
+      height: 200px;
+      background: #f1f5f9;
+      border: 2px solid #334155;
+    }
+    .item {
+      line-height: 60px;
+      text-align: center;
+      font-weight: bold;
+      color: white;
+      background: #4f46e5;
+      outline: 1px solid white;
+    }
+
+    .center  { justify-content: center; align-content: center; }
+    .end     { justify-content: end; align-content: end; }
+    .between { justify-content: space-between; align-content: space-between; }
+  </style>
+</head>
+<body>
+  <div class="demos">
+    <div>
+      <p>지정 안 함</p>
+      <div class="container">
+        <div class="item">1</div><div class="item">2</div><div class="item">3</div>
+        <div class="item">4</div><div class="item">5</div><div class="item">6</div>
+      </div>
+    </div>
+    <div>
+      <p>center</p>
+      <div class="container center">
+        <div class="item">1</div><div class="item">2</div><div class="item">3</div>
+        <div class="item">4</div><div class="item">5</div><div class="item">6</div>
+      </div>
+    </div>
+    <div>
+      <p>end</p>
+      <div class="container end">
+        <div class="item">1</div><div class="item">2</div><div class="item">3</div>
+        <div class="item">4</div><div class="item">5</div><div class="item">6</div>
+      </div>
+    </div>
+    <div>
+      <p>space-between</p>
+      <div class="container between">
+        <div class="item">1</div><div class="item">2</div><div class="item">3</div>
+        <div class="item">4</div><div class="item">5</div><div class="item">6</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>18 내용이 넘칠 때</title>
+  <style>
+    p { margin: 12px 0 6px; font-family: monospace; }
+
+    .row {
+      display: grid;
+      gap: 8px;
+      width: 400px;
+      background: #f1f5f9;
+      border: 2px solid #334155;
+    }
+    .bad  { grid-template-columns: 1fr 100px; }
+    .good { grid-template-columns: minmax(0, 1fr) 100px; }
+
+    .cell {
+      padding: 10px;
+      background: #e0e7ff;
+    }
+    .side {
+      padding: 10px;
+      font-weight: bold;
+      color: white;
+      background: #4f46e5;
+    }
+    .text {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  </style>
+</head>
+<body>
+  <p>1fr 100px: 첫 칸이 글자만큼 커진다</p>
+  <div class="row bad">
+    <div class="cell">
+      <div class="text">할 일 내용이 아주 길어서 한 줄에 다 들어가지 않는 경우입니다 정말 길어요</div>
+    </div>
+    <div class="side">삭제</div>
+  </div>
+
+  <p>minmax(0, 1fr) 100px: 글자가 말줄임된다</p>
+  <div class="row good">
+    <div class="cell">
+      <div class="text">할 일 내용이 아주 길어서 한 줄에 다 들어가지 않는 경우입니다 정말 길어요</div>
+    </div>
+    <div class="side">삭제</div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,25 @@
+/* 글자 간격과 단어 간격 */
+h1 { letter-spacing: 2px; word-spacing: 4px; }
+
+/* 텍스트 장식과 밑줄 */
+a { text-decoration: none; }           /* 링크의 기본 밑줄 제거 */
+del { text-decoration: line-through; } /* 취소선 */
+
+/* 대소문자 변환 */
+h2 { text-transform: uppercase; } /* 전부 대문자로 */
+
+/* 텍스트 넘침과 줄바꿈 */
+.title {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* 들여쓰기와 내어쓰기 */
+p { text-indent: 2em; } /* 문단 첫 줄만 들여쓰기 */
+
+/* white-space 속성 */
+pre { white-space: pre-wrap; } /* 공백·줄바꿈을 입력한 그대로 보여주되, 화면 밖으로 넘치면 줄바꿈 */
+
+/* 결과를 보기 위한 보조 스타일 */
+.title { width: 300px; border: 1px solid #ccc; }

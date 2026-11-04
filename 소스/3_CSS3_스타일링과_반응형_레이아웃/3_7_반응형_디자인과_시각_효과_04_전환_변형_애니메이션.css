@@ -1,0 +1,40 @@
+:root { --color-primary: #2563eb; }  /* 3.5절의 디자인 토큰 */
+
+/* transition과 transform */
+.button {
+  transition: background-color 0.2s ease;
+}
+.button:hover {
+  background-color: var(--color-primary);
+}
+.card {
+  transform: scale(1.05);
+}
+
+/* 회전, 확대·축소, 이동, 기울이기 */
+.box {
+  transform: rotate(10deg) scale(1.1) translateX(20px) skew(5deg);
+}
+
+/* CSS 애니메이션과 keyframes */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+.card {
+  animation: fadeIn 0.5s ease;
+}
+
+/* hover 및 focus 효과 */
+.button:hover { background-color: #1d4ed8; }
+.input:focus { outline: 2px solid var(--color-primary); }
+
+/* 사용자 움직임 감소 설정과 접근성 */
+@media (prefers-reduced-motion: reduce) {
+  * { animation: none !important; transition: none !important; }
+}
+
+/* 결과를 보기 위한 보조 스타일 */
+body { padding: 24px; }
+.button { color: white; background-color: #64748b; border: none; padding: 8px 16px; border-radius: 6px; }
+.card, .box { width: 240px; padding: 16px; margin: 32px 16px; background: #e0e7ff; }

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>11 아이템 정렬</title>
+  <style>
+    .demos { display: flex; flex-wrap: wrap; gap: 0 32px; }
+    p { margin: 12px 0 6px; font-family: monospace; }
+
+    .container {
+      display: grid;
+      grid-template-columns: repeat(3, 100px);
+      grid-template-rows: 90px;
+      width: 300px;
+      /* 칸 경계를 보려고 그린 격자 무늬. 정렬과는 관계없다 */
+      background-color: #f1f5f9;
+      background-image: linear-gradient(90deg, #94a3b8 1px, transparent 1px);
+      background-size: 100px 90px;
+      border: 2px solid #334155;
+    }
+    .item {
+      padding: 8px 14px;
+      font-weight: bold;
+      color: white;
+      background: #4f46e5;
+      outline: 1px solid white;
+    }
+
+    .justify-start { justify-items: start; }
+    .align-center  { align-items: center; }
+    .place-center  { place-items: center; }
+
+    /* 아이템 하나만 다르게 */
+    .self {
+      justify-self: end;
+      align-self: end;
+      background: #dc2626;
+    }
+  </style>
+</head>
+<body>
+  <div class="demos">
+    <div>
+      <p>지정 안 함 (stretch)</p>
+      <div class="container">
+        <div class="item">1</div><div class="item">2</div><div class="item">3</div>
+      </div>
+    </div>
+    <div>
+      <p>justify-items: start</p>
+      <div class="container justify-start">
+        <div class="item">1</div><div class="item">2</div><div class="item">3</div>
+      </div>
+    </div>
+    <div>
+      <p>align-items: center</p>
+      <div class="container align-center">
+        <div class="item">1</div><div class="item">2</div><div class="item">3</div>
+      </div>
+    </div>
+    <div>
+      <p>place-items: center</p>
+      <div class="container place-center">
+        <div class="item">1</div><div class="item">2</div><div class="item">3</div>
+      </div>
+    </div>
+    <div>
+      <p>place-items: center + 2번만 self</p>
+      <div class="container place-center">
+        <div class="item">1</div><div class="item self">2</div><div class="item">3</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

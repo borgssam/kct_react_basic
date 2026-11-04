@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>07 column에서 축이 바뀜</title>
+  <style>
+    .demos { display: flex; gap: 32px; }
+    p { margin: 12px 0 6px; font-family: monospace; }
+
+    .container {
+      display: flex;
+      justify-content: flex-end; /* 주축의 끝으로 */
+      align-items: center;       /* 교차축의 가운데로 */
+      width: 260px;
+      height: 240px;
+      background: #f1f5f9;
+      border: 2px solid #334155;
+    }
+    .item {
+      width: 60px;
+      height: 60px;
+      line-height: 60px;
+      text-align: center;
+      font-weight: bold;
+      color: white;
+      background: #0d9488;
+      outline: 1px solid white;
+    }
+
+    .row    { flex-direction: row; }
+    .column { flex-direction: column; }
+  </style>
+</head>
+<body>
+  <div class="demos">
+    <div>
+      <p>flex-direction: row</p>
+      <div class="container row">
+        <div class="item">1</div><div class="item">2</div><div class="item">3</div>
+      </div>
+    </div>
+    <div>
+      <p>flex-direction: column</p>
+      <div class="container column">
+        <div class="item">1</div><div class="item">2</div><div class="item">3</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

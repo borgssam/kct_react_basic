@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>17 종합 실습</title>
+  <style>
+    body { margin: 0; background: #f1f5f9; }
+
+    /* 1. 페이지 뼈대: 휴대폰에서는 위에서 아래로 쌓는다 */
+    .page {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: auto auto 1fr auto;
+      grid-template-areas:
+        "header"
+        "side"
+        "main"
+        "footer";
+      min-height: 100vh;
+    }
+
+    /* 넓은 화면에서는 이름표 배치만 바꾼다 */
+    @media (min-width: 768px) {
+      .page {
+        grid-template-columns: 160px 1fr;
+        grid-template-rows: auto 1fr auto;
+        grid-template-areas:
+          "header header"
+          "side   main"
+          "footer footer";
+      }
+    }
+
+    .header { grid-area: header; padding: 14px 20px; font-weight: bold; color: white; background: #1e293b; }
+    .side   { grid-area: side;   padding: 16px; background: #e2e8f0; }
+    .main   { grid-area: main;   padding: 16px; }
+    .footer { grid-area: footer; padding: 12px; text-align: center; color: white; background: #334155; }
+
+    /* 2. 카드 목록: 칸 수를 브라우저가 계산한다 */
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+      grid-auto-rows: minmax(80px, auto);
+      gap: 12px;
+    }
+    .card {
+      padding: 14px;
+      background: white;
+      border: 1px solid #cbd5e1;
+      border-radius: 8px;
+    }
+
+    /* 3. 추천 상품: 두 칸을 차지한다 */
+    .featured {
+      grid-column: span 2;
+      font-weight: bold;
+      color: white;
+      background: #4f46e5;
+    }
+
+    /* 칸이 하나뿐인 좁은 화면에서는 두 칸을 차지하지 않게 한다 */
+    @media (max-width: 400px) {
+      .featured { grid-column: auto; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header class="header">보그쌤 쇼핑</header>
+    <aside class="side">분류</aside>
+    <main class="main">
+      <div class="cards">
+        <div class="card featured">추천 상품</div>
+        <div class="card">상품 1</div>
+        <div class="card">상품 2</div>
+        <div class="card">상품 3</div>
+        <div class="card">상품 4</div>
+        <div class="card">상품 5</div>
+      </div>
+    </main>
+    <footer class="footer">꼬리글</footer>
+  </div>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>01 static</title>
+  <style>
+    .box {
+      width: 120px;
+      height: 60px;
+      line-height: 60px;
+      text-align: center;
+      font-weight: bold;
+      color: white;
+    }
+    .a { background: #2563eb; }
+    .b { background: #dc2626; }
+    .c { background: #059669; }
+
+    /* static은 기본값이라 쓰지 않아도 결과가 같다. top은 무시된다. */
+    .b {
+      position: static;
+      top: 100px;
+    }
+  </style>
+</head>
+<body>
+  <div class="box a">A</div>
+  <div class="box b">B</div>
+  <div class="box c">C</div>
+</body>
+</html>

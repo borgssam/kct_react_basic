@@ -1,0 +1,6 @@
+/* 속성 선택자 */
+input[type="email"] { border-color: blue; }
+
+/* 가상 클래스와 가상 요소 */
+a:hover { color: orange; }      /* 가상 클래스: 특정 상태일 때 */
+p::first-line { font-weight: bold; } /* 가상 요소: 요소의 일부분을 가상으로 선택 */

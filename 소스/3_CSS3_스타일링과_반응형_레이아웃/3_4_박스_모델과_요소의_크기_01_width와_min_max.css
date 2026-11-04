@@ -1,0 +1,15 @@
+/* width와 height */
+.box {
+  width: 300px;
+  height: 200px;
+}
+
+/* min-width, max-width, min-height, max-height */
+.box.fluid {
+  width: 80%;
+  max-width: 600px; /* 화면이 아주 넓어도 600px을 넘지 않음 */
+  min-width: 200px; /* 화면이 아주 좁아도 200px보다 줄지 않음 */
+}
+
+/* 결과를 보기 위한 보조 스타일 */
+.box { background: #dbeafe; margin-bottom: 16px; }

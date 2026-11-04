@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>10 z-index</title>
+  <style>
+    .wrap { display: flex; gap: 40px; }
+    .stage {
+      position: relative;
+      width: 240px;
+      height: 200px;
+      background: #f1f5f9;
+    }
+    .box {
+      position: absolute;
+      width: 110px;
+      height: 80px;
+      padding: 6px;
+      font-weight: bold;
+      color: white;
+    }
+    .a { top: 16px; left: 16px; background: #2563eb; }
+    .b { top: 56px; left: 56px; background: #dc2626; }
+    .c { top: 96px; left: 96px; background: #059669; }
+
+    /* 오른쪽 무대에서만 층을 거꾸로 지정한다 */
+    .reverse .a { z-index: 3; }
+    .reverse .b { z-index: 2; }
+    .reverse .c { z-index: 1; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div>
+      <p>z-index 없음: 나중 요소가 위</p>
+      <div class="stage">
+        <div class="box a">A</div>
+        <div class="box b">B</div>
+        <div class="box c">C</div>
+      </div>
+    </div>
+    <div>
+      <p>z-index 지정: 큰 숫자가 위</p>
+      <div class="stage reverse">
+        <div class="box a">A (3)</div>
+        <div class="box b">B (2)</div>
+        <div class="box c">C (1)</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

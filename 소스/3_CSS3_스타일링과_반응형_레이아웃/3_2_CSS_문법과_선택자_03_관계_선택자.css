@@ -1,0 +1,10 @@
+/* 자손 및 자식 선택자 */
+.card p { color: gray; }    /* .card 안의 모든 하위 p(자손, 깊이 무관) */
+.card > p { color: gray; }  /* .card의 바로 아래 자식인 p만(한 단계만) */
+
+/* 인접 형제 및 일반 형제 선택자 */
+h2 + p { margin-top: 0; }  /* h2 바로 다음에 오는 p 하나만(인접 형제) */
+h2 ~ p { color: gray; }    /* h2 뒤에 오는 모든 형제 p(일반 형제) */
+
+/* 결과를 보기 위한 보조 스타일 */
+.card > p { font-weight: bold; }

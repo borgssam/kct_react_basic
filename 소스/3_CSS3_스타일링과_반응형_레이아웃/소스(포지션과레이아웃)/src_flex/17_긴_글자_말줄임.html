@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>17 긴 글자 말줄임</title>
+  <style>
+    p { margin: 12px 0 6px; font-family: monospace; }
+
+    .row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      width: 360px;
+      padding: 8px;
+      background: #f1f5f9;
+      border: 2px solid #334155;
+    }
+
+    /* flex 아이템: 남는 공간을 차지한다 */
+    .wrapper { flex: 1; }
+
+    /* 이 한 줄이 있어야 wrapper가 글자 길이보다 작게 줄어들 수 있다 */
+    .can-shrink { min-width: 0; }
+
+    .text {
+      white-space: nowrap;      /* 줄바꿈하지 않는다 */
+      overflow: hidden;         /* 넘치는 부분을 감춘다 */
+      text-overflow: ellipsis;  /* 감춘 자리에 …을 표시한다 */
+    }
+  </style>
+</head>
+<body>
+  <p>min-width 없음: 삭제 버튼이 상자 밖으로 밀려난다</p>
+  <div class="row">
+    <div class="wrapper">
+      <div class="text">할 일 내용이 아주 길어서 한 줄에 다 들어가지 않는 경우입니다 정말 길어요</div>
+    </div>
+    <button>삭제</button>
+  </div>
+
+  <p>min-width: 0 추가: 글자가 말줄임된다</p>
+  <div class="row">
+    <div class="wrapper can-shrink">
+      <div class="text">할 일 내용이 아주 길어서 한 줄에 다 들어가지 않는 경우입니다 정말 길어요</div>
+    </div>
+    <button>삭제</button>
+  </div>
+</body>
+</html>

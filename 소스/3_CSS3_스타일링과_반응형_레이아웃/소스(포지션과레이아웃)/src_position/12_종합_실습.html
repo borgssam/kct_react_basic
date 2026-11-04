@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>12 종합 실습</title>
+  <style>
+    body { margin: 0; background: #f1f5f9; }
+
+    /* 1. sticky 머리글: 스크롤해도 화면 위에 붙어 있다 */
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 10; /* 지우면 카드가 머리글 위로 올라온다 */
+      padding: 14px 20px;
+      font-weight: bold;
+      color: white;
+      background: #1e293b;
+    }
+
+    .list { padding: 20px; }
+
+    /* 2. 카드 + 배지: 부모는 relative, 자식은 absolute */
+    .card {
+      position: relative;
+      height: 90px;
+      margin-bottom: 16px;
+      padding: 16px;
+      background: white;
+      border: 1px solid #cbd5e1;
+      border-radius: 8px;
+    }
+    .badge {
+      position: absolute;
+      top: 8px;
+      right: 8px;
+      padding: 2px 8px;
+      font-size: 13px;
+      color: white;
+      background: #dc2626;
+      border-radius: 4px;
+    }
+
+    /* 3. fixed 버튼: 언제나 화면 오른쪽 아래 */
+    .open-button {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      z-index: 20;
+      padding: 12px 18px;
+      font-size: 15px;
+      color: white;
+      background: #2563eb;
+      border: 0;
+      border-radius: 24px;
+      cursor: pointer;
+    }
+
+    /* 4. 모달: 화면 전체를 덮는 막 + 가운데 상자 */
+    .modal {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 100;
+      align-items: center;
+      justify-content: center;
+      background: rgba(0, 0, 0, 0.5);
+    }
+    .modal.open { display: flex; }
+    .modal-box {
+      width: 280px;
+      padding: 24px;
+      text-align: center;
+      background: white;
+      border-radius: 12px;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">보그쌤 쇼핑</div>
+
+  <div class="list">
+    <div class="card">상품 1<span class="badge">NEW</span></div>
+    <div class="card">상품 2</div>
+    <div class="card">상품 3<span class="badge">SALE</span></div>
+    <div class="card">상품 4</div>
+    <div class="card">상품 5<span class="badge">NEW</span></div>
+    <div class="card">상품 6</div>
+    <div class="card">상품 7</div>
+    <div class="card">상품 8<span class="badge">SALE</span></div>
+  </div>
+
+  <button class="open-button" id="open">문의하기</button>
+
+  <div class="modal" id="modal">
+    <div class="modal-box">
+      <p>무엇을 도와드릴까요?</p>
+      <button id="close">닫기</button>
+    </div>
+  </div>
+
+  <script>
+    const modal = document.getElementById("modal");
+    document.getElementById("open").onclick = () => modal.classList.add("open");
+    document.getElementById("close").onclick = () => modal.classList.remove("open");
+  </script>
+</body>
+</html>

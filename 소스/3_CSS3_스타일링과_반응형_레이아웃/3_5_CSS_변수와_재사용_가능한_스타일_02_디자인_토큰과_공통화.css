@@ -1,0 +1,21 @@
+/* 공통 색상과 간격 정의 */
+:root {
+  --color-primary: #2563eb;
+  --color-danger: #dc2626;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+}
+
+/* 반복되는 스타일의 공통화 */
+.btn-primary,
+.btn-secondary {
+  padding: var(--space-sm) var(--space-md);
+  border-radius: 6px;
+  border: none;
+}
+.btn-primary { background: var(--color-primary); color: white; }
+.btn-secondary { background: white; color: var(--color-primary); }
+
+/* 결과를 보기 위한 보조 스타일 */
+body { background: #f1f5f9; padding: var(--space-lg); }

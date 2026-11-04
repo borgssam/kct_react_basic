@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>16 flex와 grid 비교</title>
+  <style>
+    p { margin: 12px 0 6px; font-family: monospace; }
+
+    .flex, .grid {
+      gap: 12px;
+      width: 600px;
+      background: #f1f5f9;
+      border: 2px solid #334155;
+    }
+
+    .flex { display: flex; flex-wrap: wrap; }
+    .flex .card { flex: 1 1 180px; }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    }
+
+    .card {
+      height: 50px;
+      line-height: 50px;
+      text-align: center;
+      font-weight: bold;
+      color: white;
+      background: #4f46e5;
+    }
+  </style>
+</head>
+<body>
+  <p>Flexbox: flex-wrap + flex: 1 1 180px</p>
+  <div class="flex">
+    <div class="card">1</div><div class="card">2</div><div class="card">3</div>
+    <div class="card">4</div><div class="card">5</div>
+  </div>
+
+  <p>Grid: repeat(auto-fill, minmax(180px, 1fr))</p>
+  <div class="grid">
+    <div class="card">1</div><div class="card">2</div><div class="card">3</div>
+    <div class="card">4</div><div class="card">5</div>
+  </div>
+</body>
+</html>

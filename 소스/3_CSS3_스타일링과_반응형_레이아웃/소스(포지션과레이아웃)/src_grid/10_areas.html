@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>10 areas</title>
+  <style>
+    .wrap { display: flex; gap: 32px; }
+    p { margin: 12px 0 6px; font-family: monospace; }
+
+    .page {
+      display: grid;
+      grid-template-columns: 90px 170px;
+      grid-template-rows: 50px 130px 50px;
+      background: #f1f5f9;
+      border: 2px solid #334155;
+    }
+    .basic {
+      grid-template-areas:
+        "header header"
+        "side   main"
+        "footer footer";
+    }
+    /* 점(.)은 비워 둘 칸이다 */
+    .empty {
+      grid-template-areas:
+        "header header"
+        "side   main"
+        ".      footer";
+    }
+
+    .header { grid-area: header; background: #4f46e5; }
+    .side   { grid-area: side;   background: #059669; }
+    .main   { grid-area: main;   background: #d97706; }
+    .footer { grid-area: footer; background: #334155; }
+
+    .page div {
+      padding: 8px;
+      font-weight: bold;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div>
+      <p>기본</p>
+      <div class="page basic">
+        <div class="header">header</div>
+        <div class="side">side</div>
+        <div class="main">main</div>
+        <div class="footer">footer</div>
+      </div>
+    </div>
+    <div>
+      <p>점(.)으로 칸 비우기</p>
+      <div class="page empty">
+        <div class="header">header</div>
+        <div class="side">side</div>
+        <div class="main">main</div>
+        <div class="footer">footer</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

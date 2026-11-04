@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>14 auto-fill과 auto-fit</title>
+  <style>
+    p { margin: 12px 0 6px; font-family: monospace; }
+
+    .container {
+      display: grid;
+      gap: 12px;
+      background: #f1f5f9;
+      border: 2px solid #334155;
+    }
+    .item {
+      height: 50px;
+      line-height: 50px;
+      text-align: center;
+      font-weight: bold;
+      color: white;
+      background: #4f46e5;
+    }
+
+    /* 들어갈 수 있는 만큼 칸을 만들고, 빈 칸도 자리를 지킨다 */
+    .fill { grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); }
+
+    /* 들어갈 수 있는 만큼 칸을 만들되, 빈 칸은 접어서 없앤다 */
+    .fit  { grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); }
+  </style>
+</head>
+<body>
+  <p>auto-fill</p>
+  <div class="container fill">
+    <div class="item">1</div><div class="item">2</div><div class="item">3</div>
+  </div>
+
+  <p>auto-fit</p>
+  <div class="container fit">
+    <div class="item">1</div><div class="item">2</div><div class="item">3</div>
+  </div>
+</body>
+</html>

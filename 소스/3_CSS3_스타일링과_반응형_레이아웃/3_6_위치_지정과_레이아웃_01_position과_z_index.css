@@ -1,0 +1,20 @@
+/* top, right, bottom, left */
+.box { position: absolute; top: 20px; left: 10px; }
+
+/* absolute의 기준이 되는 relative 부모 */
+.parent { position: relative; height: 120px; background: #e0e7ff; }
+
+/* sticky, fixed */
+.sticky { position: sticky; top: 0; background: #fde68a; padding: 8px; }
+.fixed { position: fixed; right: 16px; bottom: 16px; background: #fca5a5; padding: 8px; }
+
+/* z-index와 쌓임 맥락 */
+.stack { position: relative; height: 160px; margin-top: 16px; }
+.layer { position: absolute; width: 140px; height: 90px; padding: 8px; }
+.one   { z-index: 1; top: 0;    left: 0;    background: #bfdbfe; }
+.two   { z-index: 2; top: 25px; left: 40px; background: #bbf7d0; }
+.three { z-index: 3; top: 50px; left: 80px; background: #fbcfe8; }
+
+/* 결과를 보기 위한 보조 스타일 */
+.box { background: #a5b4fc; padding: 8px; }
+.spacer { height: 1200px; }

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>02 직계 자식만</title>
+  <style>
+    .container {
+      display: flex; /* 바로 아래 자식인 .item만 가로로 놓인다 */
+      background: #f1f5f9;
+      border: 2px solid #334155;
+    }
+    .item {
+      width: 140px;
+      padding: 8px;
+      font-weight: bold;
+      color: white;
+      background: #0d9488;
+      outline: 1px solid white;
+    }
+    .inner {
+      margin-top: 6px;
+      padding: 4px 8px;
+      color: #1e293b;
+      background: #fde68a;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="item">
+      자식 1
+      <div class="inner">손자 A</div>
+      <div class="inner">손자 B</div>
+    </div>
+    <div class="item">자식 2</div>
+    <div class="item">자식 3</div>
+  </div>
+</body>
+</html>

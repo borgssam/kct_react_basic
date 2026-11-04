@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>02 relative</title>
+  <style>
+    .box {
+      width: 120px;
+      height: 60px;
+      line-height: 60px;
+      text-align: center;
+      font-weight: bold;
+      color: white;
+    }
+    .a { background: #2563eb; }
+    .b { background: #dc2626; }
+    .c { background: #059669; }
+
+    /* 점선 칸: B의 원래 자리를 눈으로 보려고 만든 표시 */
+    .spot {
+      width: 120px;
+      height: 60px;
+      outline: 2px dashed #94a3b8;
+      outline-offset: -2px;
+    }
+
+    .b {
+      position: relative;
+      top: 20px;   /* 원래 자리의 위쪽 변에서 20px 떨어진다 = 아래로 20px */
+      left: 60px;  /* 원래 자리의 왼쪽 변에서 60px 떨어진다 = 오른쪽으로 60px */
+    }
+  </style>
+</head>
+<body>
+  <div class="box a">A</div>
+  <div class="spot">
+    <div class="box b">B</div>
+  </div>
+  <div class="box c">C</div>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>05 align-items</title>
+  <style>
+    .demos { display: flex; flex-wrap: wrap; gap: 0 32px; }
+    p { margin: 12px 0 6px; font-family: monospace; }
+
+    .container {
+      display: flex;
+      width: 260px;
+      height: 120px;
+      background: #f1f5f9;
+      border: 2px solid #334155;
+    }
+    .item {
+      width: 60px;
+      height: 50px;
+      text-align: center;
+      font-weight: bold;
+      color: white;
+      background: #0d9488;
+      outline: 1px solid white;
+    }
+
+    .start   { align-items: flex-start; }
+    .center  { align-items: center; }
+    .end     { align-items: flex-end; }
+
+    /* stretch는 자식의 높이가 정해져 있지 않을 때만 늘어난다 */
+    .stretch { align-items: stretch; }
+    .stretch .item { height: auto; }
+
+    /* baseline은 글자의 밑선을 맞춘다 */
+    .baseline { align-items: baseline; }
+    .big { font-size: 34px; }
+  </style>
+</head>
+<body>
+  <div class="demos">
+    <div>
+      <p>stretch (기본값, height 없음)</p>
+      <div class="container stretch">
+        <div class="item">1</div><div class="item">2</div><div class="item">3</div>
+      </div>
+    </div>
+    <div>
+      <p>flex-start</p>
+      <div class="container start">
+        <div class="item">1</div><div class="item">2</div><div class="item">3</div>
+      </div>
+    </div>
+    <div>
+      <p>center</p>
+      <div class="container center">
+        <div class="item">1</div><div class="item">2</div><div class="item">3</div>
+      </div>
+    </div>
+    <div>
+      <p>flex-end</p>
+      <div class="container end">
+        <div class="item">1</div><div class="item">2</div><div class="item">3</div>
+      </div>
+    </div>
+    <div>
+      <p>baseline</p>
+      <div class="container baseline">
+        <div class="item">1</div><div class="item big">2</div><div class="item">3</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

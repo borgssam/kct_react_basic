@@ -1,0 +1,25 @@
+/* Flexbox 레이아웃 */
+.container {
+  display: flex;
+}
+
+/* justify-content와 align-items */
+.container {
+  display: flex;
+  justify-content: center; /* 주축 방향 정렬 */
+  align-items: center;     /* 교차축 방향 정렬 */
+}
+
+/* flex-direction과 flex-wrap */
+.container {
+  flex-direction: row;   /* row(기본), column, row-reverse, column-reverse */
+  flex-wrap: wrap;        /* 공간이 부족하면 다음 줄로 넘김 */
+}
+
+/* flex-grow, flex-shrink, flex-basis */
+.item { flex: 1; } /* flex-grow 1, flex-shrink 1, flex-basis 0%의 축약형 */
+
+/* 결과를 보기 위한 보조 스타일 */
+.container { padding: 16px; background: #f1f5f9; }
+.item { padding: 24px; background: white; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); }
+.container { gap: 16px; height: 200px; }

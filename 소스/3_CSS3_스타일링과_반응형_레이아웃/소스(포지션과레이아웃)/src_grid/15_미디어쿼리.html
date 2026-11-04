@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>15 미디어 쿼리</title>
+  <style>
+    .cards {
+      display: grid;
+      grid-template-columns: 1fr; /* 휴대폰: 1열 */
+      gap: 12px;
+    }
+
+    @media (min-width: 768px) {
+      .cards {
+        grid-template-columns: repeat(2, 1fr); /* 태블릿: 2열 */
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .cards {
+        grid-template-columns: repeat(3, 1fr); /* 데스크톱: 3열 */
+      }
+    }
+
+    .card {
+      padding: 14px;
+      font-weight: bold;
+      background: #e0e7ff;
+      border: 1px solid #4f46e5;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+  <div class="cards">
+    <div class="card">카드 1</div>
+    <div class="card">카드 2</div>
+    <div class="card">카드 3</div>
+    <div class="card">카드 4</div>
+    <div class="card">카드 5</div>
+    <div class="card">카드 6</div>
+  </div>
+</body>
+</html>

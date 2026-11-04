@@ -1,0 +1,14 @@
+/* CSS 사용자 정의 속성 */
+:root {
+  --main-color: #2563eb;
+  --spacing-unit: 8px;
+}
+
+/* var()를 이용한 변수 활용 */
+.button {
+  background-color: var(--main-color);
+  padding: var(--spacing-unit);
+}
+
+/* 결과를 보기 위한 보조 스타일 */
+.button { color: white; border: none; border-radius: 6px; margin: 8px; }

@@ -1,0 +1,17 @@
+/* Grid 레이아웃 */
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 100px);
+}
+
+/* gap과 영역 배치 */
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px; /* Flexbox·Grid 모두에서 쓸 수 있는 칸 사이 간격 */
+}
+
+/* 결과를 보기 위한 보조 스타일 */
+.container { padding: 16px; background: #f1f5f9; }
+.item { padding: 24px; background: white; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); }

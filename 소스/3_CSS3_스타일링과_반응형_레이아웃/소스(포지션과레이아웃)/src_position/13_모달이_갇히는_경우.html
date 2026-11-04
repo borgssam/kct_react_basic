@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>13 모달이 갇히는 경우</title>
+  <style>
+    .wrap { display: flex; gap: 40px; padding: 8px; }
+    .parent {
+      width: 240px;
+      height: 130px;
+      padding: 8px;
+      background: #fef3c7;
+      border: 2px dashed #d97706;
+    }
+
+    /* 경우 1: 부모의 overflow: hidden이 바깥으로 나간 부분을 잘라 낸다 */
+    .clip { position: relative; overflow: hidden; }
+    .popup {
+      position: absolute;
+      top: 70px;
+      left: 60px;
+      width: 220px;
+      height: 120px;
+      padding: 8px;
+      color: white;
+      background: #dc2626;
+    }
+
+    /* 경우 2: 부모의 transform이 fixed의 기준을 화면에서 부모로 바꾼다 */
+    .moved { transform: translateX(0); }
+    .overlay {
+      position: fixed;
+      inset: 0;
+      padding: 50px 8px 8px;
+      color: white;
+      background: rgba(0, 0, 0, 0.5);
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div>
+      <p>overflow: hidden 부모</p>
+      <div class="parent clip">
+        부모 상자
+        <div class="popup">팝업 (아래와 오른쪽이 잘린다)</div>
+      </div>
+    </div>
+    <div>
+      <p>transform 부모</p>
+      <div class="parent moved">
+        부모 상자
+        <div class="overlay">화면 전체를 덮으려던 막</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

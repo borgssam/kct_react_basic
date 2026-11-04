@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>04 auto 크기</title>
+  <style>
+    p { margin: 12px 0 6px; font-family: monospace; }
+
+    .container {
+      display: grid;
+      width: 600px;
+      background: #f1f5f9;
+      border: 2px solid #334155;
+    }
+    .item {
+      padding: 12px;
+      font-weight: bold;
+      color: white;
+      background: #4f46e5;
+      outline: 1px solid white;
+    }
+
+    .a { grid-template-columns: auto 1fr auto; }
+    .b { grid-template-columns: max-content 1fr; }
+    .c { grid-template-columns: min-content 1fr; }
+  </style>
+</head>
+<body>
+  <p>auto 1fr auto</p>
+  <div class="container a">
+    <div class="item">이름</div><div class="item">남는 폭 전부</div><div class="item">저장 버튼</div>
+  </div>
+
+  <p>max-content 1fr</p>
+  <div class="container b">
+    <div class="item">글자가 긴 제목입니다</div><div class="item">남는 폭 전부</div>
+  </div>
+
+  <p>min-content 1fr</p>
+  <div class="container c">
+    <div class="item">글자가 긴 제목입니다</div><div class="item">남는 폭 전부</div>
+  </div>
+</body>
+</html>

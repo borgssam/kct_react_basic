@@ -1,0 +1,10 @@
+/* CSS 규칙의 기본 구조
+selector {
+  property: value;
+}
+*/
+
+p {
+  color: blue;
+  font-size: 16px;
+}

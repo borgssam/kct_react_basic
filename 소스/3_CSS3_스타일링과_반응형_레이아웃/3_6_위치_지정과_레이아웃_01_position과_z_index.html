@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>position과 z-index</title>
+  <link rel="stylesheet" href="3_6_위치_지정과_레이아웃_01_position과_z_index.css">
+</head>
+<body>
+  <header class="sticky">sticky: 스크롤하면 위에 붙는다</header>
+  <div class="parent">
+    relative 부모
+    <div class="box">absolute</div>
+  </div>
+  <div class="stack">
+    <div class="layer one">z-index: 1</div>
+    <div class="layer two">z-index: 2</div>
+    <div class="layer three">z-index: 3</div>
+  </div>
+  <div class="fixed">fixed</div>
+  <div class="spacer">아래로 스크롤해 보자</div>
+</body>
+</html>

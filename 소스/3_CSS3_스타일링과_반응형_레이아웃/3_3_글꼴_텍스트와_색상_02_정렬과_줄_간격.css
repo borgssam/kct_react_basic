@@ -1,0 +1,8 @@
+/* 텍스트 정렬과 줄 간격 */
+p {
+  text-align: center;
+  line-height: 1.6;
+}
+
+/* 결과를 보기 위한 보조 스타일 */
+p { max-width: 480px; margin: 24px auto; }

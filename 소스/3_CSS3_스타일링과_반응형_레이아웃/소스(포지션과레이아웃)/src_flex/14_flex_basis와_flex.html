@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>14 flex-basis와 flex</title>
+  <style>
+    p { margin: 12px 0 6px; font-family: monospace; }
+
+    .container {
+      display: flex;
+      width: 500px;
+      background: #f1f5f9;
+      border: 2px solid #334155;
+    }
+    .item {
+      height: 50px;
+      line-height: 50px;
+      text-align: center;
+      font-weight: bold;
+      color: white;
+      background: #0d9488;
+      outline: 1px solid white;
+    }
+
+    /* flex: 1 은 "남는 공간을 똑같이 나눠 가져라" */
+    .equal { flex: 1; }
+
+    /* flex: 0 0 150px 은 "늘지도 줄지도 말고 150px" */
+    .side { flex: 0 0 150px; background: #2563eb; }
+  </style>
+</head>
+<body>
+  <p>모두 flex: 1</p>
+  <div class="container">
+    <div class="item equal">짧음</div>
+    <div class="item equal">글자가 조금 더 깁니다</div>
+    <div class="item equal">짧음</div>
+  </div>
+
+  <p>flex: 0 0 150px + flex: 1</p>
+  <div class="container">
+    <div class="item side">사이드바</div>
+    <div class="item equal">본문 (나머지 전부)</div>
+  </div>
+</body>
+</html>

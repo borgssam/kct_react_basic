@@ -1,0 +1,6 @@
+/* 일부러 오타를 넣었다. 개발자 도구 Styles에서 경고(⚠)와 취소선을 확인한다 */
+p {
+  colr: red;                 /* 속성 이름 오타: color → colr */
+  background-color: yelow;   /* 값 오타: yellow → yelow */
+  padding: 8px;              /* 올바른 줄은 그대로 적용된다 */
+}

@@ -1,0 +1,9 @@
+
+/* 요소, 클래스, ID 선택자 */
+p { color: blue; }           /* 모든 <p> 요소 */
+.highlight { color: red; }   /* class="highlight"인 모든 요소 */
+#title { font-size: 2rem; }  /* id="title"인 단 하나의 요소 */
+
+/* 그룹 선택자와 복합 선택자 */
+h1, h2, h3 { font-weight: bold; }   /* 그룹: 여러 선택자에 같은 스타일 */
+p.highlight { color: red; }         /* 복합: p이면서 highlight 클래스도 가진 요소 */

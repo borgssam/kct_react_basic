@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .wrap{display:flex; gap:40px;}
+    .stage{
+      position: relative;
+      background-color: #f1f5f9;
+      width:240px;
+      height:200px;
+    }
+    .box{
+      width:120px;
+      height:60px;
+      line-height:60px;
+      text-align: center;
+      color:white;
+
+    }
+
+    .a { background: #2563eb; }
+    .b { background: #dc2626; }
+    .c { background: #059669; }
+
+    .move-relative{
+      position: relative;
+      top:20px;
+      left: 100px;
+    }
+
+    .move-absolute{
+      position: absolute;
+      top:20px;
+      left: 100px;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div>
+      <p>relative:B자리가 남음</p>
+      <div class="stage">
+        <div class="box a">A</div>
+        <div class="box b move-relative">B</div>
+        <div class="box c">C</div>
+      </div>
+
+    </div>
+    <div>
+      <p>absolute:B자리가 사라짐</p>
+      <div class="stage">
+        <div class="box a">A</div>
+        <div class="box b move-absolute">B</div>
+        <div class="box c">C</div>
+      </div>
+    </div>
+
+
+  </div>
+</body>
+</html>

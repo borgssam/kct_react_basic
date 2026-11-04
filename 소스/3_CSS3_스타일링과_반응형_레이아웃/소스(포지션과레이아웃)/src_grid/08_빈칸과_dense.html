@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>08 빈칸과 dense</title>
+  <style>
+    .wrap { display: flex; gap: 32px; }
+    p { margin: 12px 0 6px; font-family: monospace; }
+
+    .container {
+      display: grid;
+      grid-template-columns: repeat(3, 90px);
+      grid-auto-rows: 60px;
+      background: #f1f5f9;
+      border: 2px solid #334155;
+    }
+    .item {
+      line-height: 60px;
+      text-align: center;
+      font-weight: bold;
+      color: white;
+      background: #4f46e5;
+      outline: 1px solid white;
+    }
+    .wide {
+      grid-column: span 2;
+      background: #dc2626;
+    }
+
+    /* 앞쪽 빈칸을 뒤의 작은 아이템으로 채운다 */
+    .dense { grid-auto-flow: dense; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div>
+      <p>기본 배치</p>
+      <div class="container">
+        <div class="item">1</div>
+        <div class="item wide">2</div>
+        <div class="item wide">3</div>
+        <div class="item wide">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+      </div>
+    </div>
+    <div>
+      <p>grid-auto-flow: dense</p>
+      <div class="container dense">
+        <div class="item">1</div>
+        <div class="item wide">2</div>
+        <div class="item wide">3</div>
+        <div class="item wide">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

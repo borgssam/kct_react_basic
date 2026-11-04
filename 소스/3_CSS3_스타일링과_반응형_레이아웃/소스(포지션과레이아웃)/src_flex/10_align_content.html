@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>10 align-content</title>
+  <style>
+    .demos { display: flex; flex-wrap: wrap; gap: 0 32px; }
+    p { margin: 12px 0 6px; font-family: monospace; }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap; /* 여러 줄일 때만 align-content가 동작한다 */
+      width: 240px;
+      height: 200px;
+      background: #f1f5f9;
+      border: 2px solid #334155;
+    }
+    .item {
+      width: 100px;
+      height: 50px;
+      line-height: 50px;
+      text-align: center;
+      font-weight: bold;
+      color: white;
+      background: #0d9488;
+      outline: 1px solid white;
+    }
+
+    .start   { align-content: flex-start; }
+    .center  { align-content: center; }
+    .between { align-content: space-between; }
+  </style>
+</head>
+<body>
+  <div class="demos">
+    <div>
+      <p>지정 안 함 (기본값)</p>
+      <div class="container">
+        <div class="item">1</div><div class="item">2</div><div class="item">3</div><div class="item">4</div>
+      </div>
+    </div>
+    <div>
+      <p>flex-start</p>
+      <div class="container start">
+        <div class="item">1</div><div class="item">2</div><div class="item">3</div><div class="item">4</div>
+      </div>
+    </div>
+    <div>
+      <p>center</p>
+      <div class="container center">
+        <div class="item">1</div><div class="item">2</div><div class="item">3</div><div class="item">4</div>
+      </div>
+    </div>
+    <div>
+      <p>space-between</p>
+      <div class="container between">
+        <div class="item">1</div><div class="item">2</div><div class="item">3</div><div class="item">4</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

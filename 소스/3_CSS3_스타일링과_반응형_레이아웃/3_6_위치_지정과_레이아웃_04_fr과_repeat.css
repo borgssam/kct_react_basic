@@ -1,0 +1,10 @@
+/* fr — 공간을 조각으로 나눠 갖는 단위, repeat() */
+.grid    { display: grid; gap: 8px; margin-bottom: 16px; }
+.cols-1   { grid-template-columns: 1fr; }
+.cols-3   { grid-template-columns: repeat(3, 1fr); }
+.cols-2-1 { grid-template-columns: 2fr 1fr; }
+.side     { grid-template-columns: 200px 1fr; }
+
+/* 결과를 보기 위한 보조 스타일 */
+body { padding: 16px; }
+.grid div { padding: 16px; background: #e0e7ff; border-radius: 6px; text-align: center; }

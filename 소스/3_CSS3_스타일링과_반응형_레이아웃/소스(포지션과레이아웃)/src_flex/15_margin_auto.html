@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>15 margin auto</title>
+  <style>
+    .nav {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      width: 520px;
+      padding: 12px;
+      background: #1e293b;
+    }
+    .nav div {
+      padding: 6px 12px;
+      font-weight: bold;
+      color: white;
+      background: #0d9488;
+    }
+
+    /* 남는 공간을 전부 왼쪽 여백으로 가져가, 오른쪽 끝으로 밀려난다 */
+    .nav .login {
+      margin-left: auto;
+      background: #dc2626;
+    }
+  </style>
+</head>
+<body>
+  <div class="nav">
+    <div>로고</div>
+    <div>메뉴1</div>
+    <div>메뉴2</div>
+    <div class="login">로그인</div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>09 sticky 부모 범위</title>
+  <style>
+    section {
+      margin-bottom: 8px;
+      padding: 0 12px 4px;
+      background: #f1f5f9;
+    }
+    h2 {
+      position: sticky;
+      top: 0;
+      margin: 0 -12px;
+      padding: 10px 12px;
+      font-size: 18px;
+      color: white;
+    }
+    #part1 h2 { background: #dc2626; }
+    #part2 h2 { background: #2563eb; }
+  </style>
+</head>
+<body>
+  <section id="part1">
+    <h2>1부 제목</h2>
+    <div class="lines"></div>
+  </section>
+  <section id="part2">
+    <h2>2부 제목</h2>
+    <div class="lines"></div>
+  </section>
+
+  <script>
+    // 스크롤이 생기도록 글줄을 만든다. position과는 관계없는 코드다.
+    document.querySelectorAll(".lines").forEach(function (box) {
+      let html = "";
+      for (let i = 1; i <= 20; i++) {
+        html += `<p>본문 ${i}번째 줄</p>`;
+      }
+      box.innerHTML = html;
+    });
+  </script>
+</body>
+</html>

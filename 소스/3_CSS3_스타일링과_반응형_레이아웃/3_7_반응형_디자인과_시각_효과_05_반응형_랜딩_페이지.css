@@ -1,0 +1,87 @@
+/* 초기화와 디자인 토큰 (3.1, 3.5) */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --color-primary: #2563eb;
+  --space-md: 16px;
+  --space-lg: 24px;
+}
+body {
+  font-family: sans-serif;
+  line-height: 1.6;
+  color: #333333;
+}
+
+/* 모바일 우선: 기본은 메뉴 세로 목록, 카드 1열 */
+.header {
+  padding: var(--space-md);
+  background: #f1f5f9;
+}
+.menu {
+  list-style: none;
+  display: flex;
+  flex-direction: column; /* 세로 목록 */
+  gap: 8px;
+  margin-top: 8px;
+}
+.menu a {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+.hero {
+  padding: var(--space-lg) var(--space-md);
+  text-align: center;
+}
+.button {
+  display: inline-block;
+  margin-top: var(--space-md);
+  padding: 8px var(--space-md);
+  border-radius: 6px;
+  background: var(--color-primary);
+  color: white;
+  text-decoration: none;
+  transition: transform 0.2s ease;
+}
+.button:hover {
+  transform: scale(1.05);
+}
+.cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-md);
+  padding: var(--space-md);
+}
+.card {
+  padding: var(--space-lg);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+.footer {
+  padding: var(--space-md);
+  text-align: center;
+  color: #64748b;
+}
+
+/* 768px 이상: 메뉴 가로 목록, 카드 3열 */
+@media (min-width: 768px) {
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .menu {
+    flex-direction: row; /* 가로 목록 */
+    gap: var(--space-lg);
+    margin-top: 0;
+  }
+  .cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation: none !important; transition: none !important; }
+}

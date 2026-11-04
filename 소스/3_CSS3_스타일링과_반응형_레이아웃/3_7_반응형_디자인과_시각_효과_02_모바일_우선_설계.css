@@ -1,0 +1,15 @@
+/* 모바일 우선 설계: 작은 화면(1열)이 기본값 */
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+@media (min-width: 768px) {
+  .container {
+    grid-template-columns: repeat(3, 1fr); /* 화면이 768px 이상이면 3열로 */
+  }
+}
+
+/* 결과를 보기 위한 보조 스타일 */
+.container { padding: 16px; background: #f1f5f9; }
+.item { padding: 24px; background: white; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); }
+.container { gap: 16px; }

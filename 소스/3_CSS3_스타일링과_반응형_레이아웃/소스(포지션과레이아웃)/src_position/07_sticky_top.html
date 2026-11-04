@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>07 sticky top</title>
+  <style>
+    .bar {
+      position: sticky;
+      top: 0; /* 화면 위쪽 변에 닿으면 멈춘다 */
+      padding: 12px;
+      font-weight: bold;
+      color: white;
+      background: #dc2626;
+    }
+  </style>
+</head>
+<body>
+  <div id="before"></div>
+  <div class="bar">sticky 메뉴</div>
+  <div id="after"></div>
+
+  <script>
+    // 스크롤이 생기도록 글줄을 만든다. position과는 관계없는 코드다.
+    function makeLines(id, start, end) {
+      let html = "";
+      for (let i = start; i <= end; i++) {
+        html += `<p>본문 ${i}번째 줄</p>`;
+      }
+      document.getElementById(id).innerHTML = html;
+    }
+    makeLines("before", 1, 4);
+    makeLines("after", 5, 80);
+  </script>
+</body>
+</html>

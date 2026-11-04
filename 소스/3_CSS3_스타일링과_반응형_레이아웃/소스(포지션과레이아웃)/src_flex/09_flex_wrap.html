@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>09 flex-wrap</title>
+  <style>
+    .demos { display: flex; flex-wrap: wrap; gap: 0 32px; }
+    p { margin: 12px 0 6px; font-family: monospace; }
+
+    .container {
+      display: flex;
+      width: 300px; /* 자식 합계 120px × 3 = 360px → 60px 모자란다 */
+      height: 140px;
+      background: #f1f5f9;
+      border: 2px solid #334155;
+    }
+    .item {
+      width: 120px;
+      height: 50px;
+      line-height: 50px;
+      text-align: center;
+      font-weight: bold;
+      color: white;
+      background: #0d9488;
+      outline: 1px solid white;
+    }
+
+    .nowrap  { flex-wrap: nowrap; }
+    .wrap    { flex-wrap: wrap; }
+    .reverse { flex-wrap: wrap-reverse; }
+  </style>
+</head>
+<body>
+  <div class="demos">
+    <div>
+      <p>nowrap (기본값)</p>
+      <div class="container nowrap">
+        <div class="item">1</div><div class="item">2</div><div class="item">3</div>
+      </div>
+    </div>
+    <div>
+      <p>wrap</p>
+      <div class="container wrap">
+        <div class="item">1</div><div class="item">2</div><div class="item">3</div>
+      </div>
+    </div>
+    <div>
+      <p>wrap-reverse</p>
+      <div class="container reverse">
+        <div class="item">1</div><div class="item">2</div><div class="item">3</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

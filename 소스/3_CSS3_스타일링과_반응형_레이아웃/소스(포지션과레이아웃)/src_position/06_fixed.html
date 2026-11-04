@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>06 fixed</title>
+  <style>
+    .label {
+      width: 170px;
+      padding: 12px;
+      font-weight: bold;
+      color: white;
+    }
+    .abs {
+      position: absolute; /* 기준 조상이 없다 → 문서 맨 위가 기준 */
+      top: 16px;
+      right: 16px;
+      background: #2563eb;
+    }
+    .fix {
+      position: fixed; /* 브라우저 화면이 기준 */
+      bottom: 16px;
+      right: 16px;
+      background: #dc2626;
+    }
+  </style>
+</head>
+<body>
+  <div class="label abs">absolute 상자</div>
+  <div class="label fix">fixed 상자</div>
+  <div id="lines"></div>
+
+  <script>
+    // 스크롤이 생기도록 글줄을 80개 만든다. position과는 관계없는 코드다.
+    let html = "";
+    for (let i = 1; i <= 80; i++) {
+      html += `<p>본문 ${i}번째 줄</p>`;
+    }
+    document.getElementById("lines").innerHTML = html;
+  </script>
+</body>
+</html>

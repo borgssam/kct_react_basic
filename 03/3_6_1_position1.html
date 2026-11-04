@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .box{
+      width:120px;
+      height:60px;
+      line-height:60px;
+      font-weight:bold;
+      text-align: center;
+      color:white;
+    }
+
+    .a { background: #2563eb; }
+    .b { background: #dc2626; }
+    .c { background: #059669; }
+
+    .b{
+      position:relative;
+      top:120px;
+      left:120px;
+    }
+    .spot {
+      width: 120px;
+      height: 60px;
+      outline: 2px dashed #94a3b8;
+      outline-offset: -2px;
+    }
+  </style>
+</head>
+<body>
+  <div class = "box a">A</div>
+  <div class ="spot">
+    <div class = "box b">B</div>
+  </div>
+  
+  <div class = "box c">C</div>
+
+  
+</body>
+</html>

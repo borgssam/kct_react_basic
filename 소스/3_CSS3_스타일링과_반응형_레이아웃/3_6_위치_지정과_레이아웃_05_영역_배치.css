@@ -1,0 +1,35 @@
+/* ① 칸 여러 개 차지하기 */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+.wide { grid-column: span 2; } /* 가로로 2칸 차지 */
+.tall { grid-row: span 2; }    /* 세로로 2칸 차지 */
+
+/* ② 이름으로 영역 배치하기 */
+.page {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas:
+    "header  header"
+    "sidebar main"
+    "footer  footer";
+  gap: 8px;
+  min-height: 320px;
+}
+.page header { grid-area: header; }
+.page aside  { grid-area: sidebar; }
+.page main   { grid-area: main; }
+.page footer { grid-area: footer; }
+
+/* 결과를 보기 위한 보조 스타일 */
+body { padding: 16px; font-family: sans-serif; }
+h2 { margin: 16px 0 8px; font-size: 1.1rem; }
+.card { padding: 24px; background: #e0e7ff; border-radius: 8px; }
+.page > * { padding: 16px; border-radius: 8px; }
+.page header { background: #bfdbfe; }
+.page aside  { background: #fde68a; }
+.page main   { background: #bbf7d0; }
+.page footer { background: #fbcfe8; }

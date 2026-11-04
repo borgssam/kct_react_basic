@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>11 gap</title>
+  <style>
+    p { margin: 12px 0 6px; font-family: monospace; }
+
+    .container {
+      display: flex;
+      width: 300px;
+      background: #f1f5f9;
+      border: 2px solid #334155;
+    }
+    .item {
+      width: 60px;
+      height: 50px;
+      line-height: 50px;
+      text-align: center;
+      font-weight: bold;
+      color: white;
+      background: #0d9488;
+    }
+
+    /* margin: 양쪽 끝에도 여백이 생긴다 */
+    .use-margin .item { margin: 8px; }
+
+    /* gap: 자식과 자식 사이에만 틈이 생긴다 */
+    .use-gap { gap: 16px; }
+
+    /* 여러 줄이면 줄과 줄 사이에도 틈이 생긴다 */
+    .use-gap-wrap {
+      flex-wrap: wrap;
+      gap: 16px 8px; /* 줄 사이 16px, 칸 사이 8px */
+    }
+    .use-gap-wrap .item { width: 90px; }
+  </style>
+</head>
+<body>
+  <p>margin: 8px</p>
+  <div class="container use-margin">
+    <div class="item">1</div><div class="item">2</div><div class="item">3</div>
+  </div>
+
+  <p>gap: 16px</p>
+  <div class="container use-gap">
+    <div class="item">1</div><div class="item">2</div><div class="item">3</div>
+  </div>
+
+  <p>flex-wrap: wrap; gap: 16px 8px</p>
+  <div class="container use-gap-wrap">
+    <div class="item">1</div><div class="item">2</div><div class="item">3</div><div class="item">4</div>
+  </div>
+</body>
+</html>

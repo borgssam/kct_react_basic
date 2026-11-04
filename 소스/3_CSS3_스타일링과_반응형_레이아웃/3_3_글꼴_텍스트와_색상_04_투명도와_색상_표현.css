@@ -1,0 +1,28 @@
+/* 투명도와 색상 표현 방식 */
+p {
+  color: rgb(51, 51, 51);
+  color: rgba(51, 51, 51, 0.5); /* 네 번째 값이 투명도(0~1) */
+  color: #333333;
+  color: #33333380; /* 8자리 16진수의 마지막 두 자리가 투명도 */
+}
+
+/* 투명도 비교용 네모 4개 (줄무늬 배경 위에서 비침 정도를 비교) */
+.boxes {
+  display: flex;
+  gap: 16px;
+  padding: 24px;
+  background: repeating-linear-gradient(45deg, #fde68a 0 12px, #fef3c7 12px 24px);
+}
+.box {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+}
+.a02 { background-color: rgba(37, 99, 235, 0.2); }
+.a05 { background-color: rgba(37, 99, 235, 0.5); }
+.a08 { background-color: rgba(37, 99, 235, 0.8); }
+.a10 { background-color: rgba(37, 99, 235, 1.0); }

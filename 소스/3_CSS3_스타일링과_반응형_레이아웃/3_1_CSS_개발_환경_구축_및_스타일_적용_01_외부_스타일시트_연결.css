@@ -1,0 +1,10 @@
+/* CSS 초기화와 공통 스타일 설정 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 연결 확인용 스타일 */
+h1 { color: #2563eb; }
+p { color: #333333; }

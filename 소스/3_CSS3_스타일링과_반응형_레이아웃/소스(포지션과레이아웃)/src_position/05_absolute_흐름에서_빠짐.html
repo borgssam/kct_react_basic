@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>05 absolute 흐름에서 빠짐</title>
+  <style>
+    .wrap { display: flex; gap: 40px; }
+    .stage {
+      position: relative; /* 안쪽 absolute 상자의 기준 */
+      width: 240px;
+      height: 200px;
+      background: #f1f5f9;
+    }
+    .box {
+      width: 120px;
+      height: 60px;
+      line-height: 60px;
+      text-align: center;
+      font-weight: bold;
+      color: white;
+    }
+    .a { background: #2563eb; }
+    .b { background: #dc2626; }
+    .c { background: #059669; }
+
+    .move-relative { position: relative; top: 20px; left: 100px; }
+    .move-absolute { position: absolute; top: 20px; left: 100px; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div>
+      <p>relative: B의 자리가 남는다</p>
+      <div class="stage">
+        <div class="box a">A</div>
+        <div class="box b move-relative">B</div>
+        <div class="box c">C</div>
+      </div>
+    </div>
+    <div>
+      <p>absolute: B의 자리가 사라진다</p>
+      <div class="stage">
+        <div class="box a">A</div>
+        <div class="box b move-absolute">B</div>
+        <div class="box c">C</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,13 @@
+/* box-sizing과 크기 계산 */
+.box {
+  box-sizing: border-box;
+  width: 300px;
+  padding: 20px;
+  border: 2px solid black;
+}
+
+/* 비교용: 기본값 content-box */
+.box.content { box-sizing: content-box; }
+
+/* 결과를 보기 위한 보조 스타일 */
+.box { background: #dcfce7; margin-bottom: 16px; }

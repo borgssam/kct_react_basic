@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>04 absolute 기준 있음</title>
+  <style>
+    .card {
+      position: relative; /* 이 한 줄로 카드가 배지의 기준이 된다 */
+      width: 280px;
+      height: 140px;
+      margin: 60px 0 0 60px;
+      padding: 16px;
+      background: #fef3c7;
+      border: 2px solid #d97706;
+    }
+    .badge {
+      position: absolute;
+      top: 0;
+      right: 0;
+      padding: 6px 12px;
+      font-weight: bold;
+      color: white;
+      background: #dc2626;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    카드
+    <span class="badge">NEW</span>
+  </div>
+</body>
+</html>

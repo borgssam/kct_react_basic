@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>03 repeat</title>
+  <style>
+    p { margin: 12px 0 6px; font-family: monospace; }
+
+    .container {
+      display: grid;
+      width: 600px;
+      background: #f1f5f9;
+      border: 2px solid #334155;
+    }
+    .item {
+      height: 50px;
+      line-height: 50px;
+      text-align: center;
+      font-weight: bold;
+      color: white;
+      background: #4f46e5;
+      outline: 1px solid white;
+    }
+
+    .four    { grid-template-columns: repeat(4, 1fr); }
+    .pattern { grid-template-columns: repeat(2, 100px 1fr); }
+    .mixed   { grid-template-columns: 150px repeat(3, 1fr); }
+  </style>
+</head>
+<body>
+  <p>repeat(4, 1fr)</p>
+  <div class="container four">
+    <div class="item">1</div><div class="item">2</div><div class="item">3</div><div class="item">4</div>
+  </div>
+
+  <p>repeat(2, 100px 1fr)</p>
+  <div class="container pattern">
+    <div class="item">100px</div><div class="item">1fr</div><div class="item">100px</div><div class="item">1fr</div>
+  </div>
+
+  <p>150px repeat(3, 1fr)</p>
+  <div class="container mixed">
+    <div class="item">150px</div><div class="item">1fr</div><div class="item">1fr</div><div class="item">1fr</div>
+  </div>
+</body>
+</html>
