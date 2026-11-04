@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    p { margin: 12px 0 6px; font-family: monospace; }
+
+    .container {
+      display: grid;
+      width: 600px;
+      background: #f1f5f9;
+      border: 2px solid #334155;
+    }
+
+    .item {
+      height: 50px;
+      line-height: 50px;
+      text-align: center;
+      font-weight: bold;
+      color: white;
+      background: #4f46e5;
+      outline: 1px solid white;
+    }
+
+    .equal{ grid-template-columns: 1fr 1fr 1fr;}
+    .ratio{ grid-template-columns: 2fr 1fr;}
+    .mixed{ grid-template-columns: 200px 1fr;}
+    .mixed2{ grid-template-columns: 100px 1fr 2fr;}
+
+
+  </style>
+</head>
+<body>
+  
+  <p>1fr 1fr 1fr</p>
+  <div class="container equal">
+    <div class="item">1fr</div>
+    <div class="item">1fr</div>
+    <div class="item">1fr</div>
+  </div>
+
+  <p>2fr 1fr</p>
+  <div class="container ratio">
+    <div class="item">2fr</div><div class="item">1fr</div>
+  </div>
+
+  <p>200px 1fr</p>
+  <div class="container mixed">
+    <div class="item">200px</div><div class="item">1fr</div>
+  </div>
+  
+  <p>100px 1fr 2fr</p>
+  <div class="container mixed2">
+    <div class="item">100px</div><div class="item">1fr</div><div class="item">2fr</div>
+  </div>
+</body>
+</html>
