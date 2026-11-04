@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+
+    .wrap { display: flex; gap: 40px; }
+    
+    .stage {
+      position: relative;
+      width: 240px;
+      height: 200px;
+      background: #f1f5f9;
+    }
+    
+    .box {
+      position: absolute;
+      width: 110px;
+      height: 80px;
+      padding: 6px;
+      font-weight: bold;
+      color: white;
+      text-align: right;
+    }
+    .a { top:10px; left:10px; background: #2563eb; }
+    .b { top:50px; left:50px; background: #dc2626; }
+    .c { top:90px; left:90px; background: #059669; }
+
+    .z-idx .a{z-index: 3;}
+    .z-idx .b{z-index: 25;}
+    .z-idx .c{z-index: 1;}
+
+
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div>
+      <p>zindex없음=>나중에 요소가 위</p>
+      <div class="stage">
+        <div class="box a">A</div>
+        <div class="box b">B</div>
+        <div class="box c">C</div>
+      </div>
+
+    </div>
+
+    <div>
+      <p>zindex있음=>z값 높을수록 요소가 위</p>
+      <div class="stage z-idx">
+        <div class="box a">A</div>
+        <div class="box b">B</div>
+        <div class="box c">C</div>
+      </div>
+
+    </div>
+  </div>
+  
+</body>
+</html>
