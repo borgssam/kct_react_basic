@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .demos { display: flex; flex-wrap: wrap; gap: 0 32px; }
+    p { margin: 12px 0 6px; font-family: monospace; }
+
+    .container{
+      display:grid;
+      background-color: #f1f3f9;
+      border: 2px solid #334155;
+      grid-template-columns: repeat(3,100px);
+      grid-template-rows: 90px;
+      width: 300px;
+    }
+
+    .item{
+      background-color: blueviolet;
+      color: white;
+      outline : 2px soild white;
+      padding: 8px 14px;
+      font-weight: bold;
+      width: auto;
+      height: auto;
+    }
+
+    .justify-start{ justify-items: end;}
+    .align-center { align-items: center}
+    .place-center { place-items: center}
+
+    .self{ 
+      justify-self: end;
+      align-self: end;
+      background: red;
+    }
+
+  </style>
+</head>
+<body>
+  
+  <div class="demos">
+    <div>
+      <p>지정 안 함 (stretch)</p>
+      <div class="container">
+        <div class="item">1</div><div class="item">2</div><div class="item">3</div>
+      </div>
+    </div>
+    <div>
+      <p>justify-items: start</p>
+      <div class="container justify-start">
+        <div class="item">1</div><div class="item">2</div><div class="item">3</div>
+      </div>
+    </div>
+    <div>
+      <p>align-items: center</p>
+      <div class="container align-center">
+        <div class="item">1</div><div class="item">2</div><div class="item">3</div>
+      </div>
+    </div>
+    <div>
+      <p>place-items: center</p>
+      <div class="container place-center">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+      </div>
+    </div>
+    <div>
+      <p>place-items: center + 2번만 self</p>
+      <div class="container place-center">
+        <div class="item">1</div>
+        <div class="item self">2</div>
+        <div class="item">3</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    
+    p { margin: 12px 0 6px; font-family: monospace; }
+
+    .container{
+      display:grid;
+      grid-template-columns: repeat(3,1fr);
+      background-color: #f1f3f9;
+      border: 2px solid #334155;
+      width: 600px;      
+    }
+
+    .item{
+      height: 44px;
+      background-color: purple;
+      color: white;
+    }
+
+    .one{ gap: 12px;}
+    .two{gap: 24px 8px }
+
+
+
+  </style>
+</head>
+<body>
+  
+  <p>gap: 12px</p>
+  <div class="container one">
+    <div class="item">1</div><div class="item">2</div><div class="item">3</div>
+    <div class="item">4</div><div class="item">5</div><div class="item">6</div>
+  </div>
+
+  <p>gap: 24px 8px</p>
+  <div class="container two">
+    <div class="item">1</div><div class="item">2</div><div class="item">3</div>
+    <div class="item">4</div><div class="item">5</div><div class="item">6</div>
+  </div>
+</body>
+</html>

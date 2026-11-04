@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .wrap{display: flex; gap: 32px;}
+
+    .page {
+      display: grid;
+      grid-template-columns: 90px 170px;
+      grid-template-rows: 50px 130px 50px;
+      background: #f1f3f9;
+
+    }
+
+
+    .basic {
+      grid-template-areas:
+      "header header"
+      "side   main"
+      "footer footer"
+    }
+
+    .empty {      
+      grid-template-areas:
+      "header ."
+      "side   main"
+      ".      footer"
+    }
+
+    .header{ background-color: aqua;  grid-area: header}
+    .side{background-color: aquamarine; grid-area: side}
+    .main{background-color:burlywood; grid-area: main}
+    .footer{background-color: darkseagreen; grid-area:footer}
+
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div>
+      <p>기본</p>
+      <div class="page basic">
+        <div class="header">header</div>
+        <div class="side">side</div>
+        <div class="main">main</div>
+        <div class="footer">footer</div>
+      </div>
+    </div>
+
+    <div>
+      <p>칸비우기</p>
+      <div class="page empty">
+        <div class="header">header</div>
+        <div class="side">side</div>
+        <div class="main">main</div>
+        <div class="footer"></div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
