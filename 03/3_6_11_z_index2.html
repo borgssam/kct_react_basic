@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .group{
+      position: absolute;
+      width: 260px;
+      height: 150px;
+      padding:8px;
+
+    }
+    .group1{
+      background-color: aqua;
+      top:20px; left:20px;
+      z-index: 10;
+    }
+    .group2{
+      background-color: brown;
+      top:40px; left:120px;
+      z-index:20;
+    }
+    .child{
+      background-color: blue;
+      color: white;
+      z-index:900;
+    }
+  </style>
+</head>
+<body>
+  
+  <div class="group group1">
+    봉투1 (z-index: 1)
+    <div class="child">자식 (z-index: 999)</div>
+  </div>
+  <div class="group group2">봉투2 (z-index: 2)</div>
+</body>
+</html>

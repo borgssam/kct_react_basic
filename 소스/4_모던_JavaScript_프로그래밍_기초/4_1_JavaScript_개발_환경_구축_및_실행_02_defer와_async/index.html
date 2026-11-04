@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>일반 script, defer, async의 차이</title>
+  <!-- 교재 코드: Console에 찍히는 순서로 실행 시점을 비교한다 -->
+  <script src="a.js"></script>         <!-- 만나는 즉시 다운로드하고 실행, HTML 파싱을 멈춤 -->
+  <script src="b.js" defer></script>   <!-- 다운로드는 즉시, 실행은 HTML 파싱이 끝난 뒤 -->
+  <script src="c.js" async></script>   <!-- 다운로드되는 즉시 실행(순서 보장 안 됨) -->
+</head>
+<body>
+  <h1>일반 script, defer, async의 차이</h1>
+  <p>F12 → Console에서 a.js, b.js, c.js가 실행된 순서를 확인한다.</p>
+  <p id="target">a.js가 실행될 때는 이 문단이 아직 없다.</p>
+</body>
+</html>
