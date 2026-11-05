@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    
+    p { margin: 12px 0 6px; font-family: monospace; }
+
+    .container {
+      display: grid;
+      gap: 12px;
+      background: #f1f5f9;
+      border: 2px solid #334155;
+    }
+
+    .item{
+      background-color: cadetblue;
+      color: white;
+      font-weight: bold;
+      height:50px;
+      line-height: 50px;
+      text-align: center;
+    }
+
+    .fill{
+      grid-template-columns: repeat(auto-fill,minmax(50px,1fr));
+    }
+    .fit{
+      grid-template-columns: repeat(auto-fit,minmax(50px,1fr));
+    }
+
+  </style>
+</head>
+<body>
+
+  <p>auto-fill</p>
+  <div class="container fill">
+    <div class="item">1</div>
+    <div class="item">2</div>
+    <div class="item">3</div>
+    <div class="item">4</div>
+  </div>
+
+  <p>auto-fit</p>
+  <div class="container fit">
+    <div class="item">1</div>
+    <div class="item">2</div>
+    <div class="item">3</div>
+    <div class="item">4</div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>    
+    p { margin: 12px 0 6px; font-family: monospace; }
+    
+    .container{
+      background-color: gainsboro;
+      border:  2px solid #334155;
+      display: grid;
+      gap:8px;
+    }
+
+    .item{
+      background-color: blue;
+      color:gray;
+    }
+    .cols{
+      grid-template-columns: repeat(3, minmax(100px,1fr));      
+    }
+    .sample{
+      background-color: green;
+      width:100px;
+    }
+
+     /* .wide{ width:480px;}  */
+    .narrow{ width:240px;}
+
+
+    /* 행은 최소 60px, 내용이 많으면 그만큼 늘어난다 */
+    .rows {
+      grid-template-columns: repeat(2, 1fr);
+      grid-auto-rows: minmax(60px, auto);
+      width: 480px;
+    }
+  </style>
+</head>
+<body>
+  <div class="sample">기준(100px)</div>
+  <p>minmax(100px, 1fr), 폭 480px</p>
+  <div class="container cols wide">
+    <div class="item">1</div>
+    <div class="item">2</div>
+    <div class="item">3</div>
+  </div>
+
+  
+  <p>minmax(100px, 1fr), 폭 240px (넘친다)</p>
+  <div class="container cols narrow">
+    <div class="item">1</div><div class="item">2</div><div class="item">3</div>
+  </div>
+
+  
+  <p>grid-auto-rows: minmax(60px, auto)</p>
+  <div class="container rows">
+    <div class="item">짧음</div>
+    <div class="item">짧음</div>
+    <div class="item">내용이 많으면 행의 높이도 함께 늘어납니다. 글자가 몇 줄이 되더라도 잘리지 않습니다. 옆 칸도 같은 높이가 됩니다.</div>
+    <div class="item">짧음</div>
+  </div>
+</body>
+</html>
