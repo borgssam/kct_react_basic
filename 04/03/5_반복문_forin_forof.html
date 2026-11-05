@@ -6,16 +6,50 @@
   <title>Document</title>
 </head>
 <body>
+  1
   <script>
-    const fruits= ["사과", "바나나","용과", "포도"];
-    for ( const item of fruits) {
-      console.log(item);
-    }
 
-    const student = {name: "홍길동", age:25};
-    for( const key in student){
-      console.log(key, student[key]);
+    const scores = [85, 92, 68, 95, 73];
+    let passCount = 0;
+
+    for (const score of scores) {
+      if (score >= 70) {
+        passCount++;
+      }
     }
+    console.log(`80점 이상: ${passCount}명`);
+
+
+    // for(let dan = 2; dan<10; dan++) {
+    //   console.log(`-- ${dan}단 --`);
+    //   for ( let num = 2; num <10; num ++){
+    //     console.log(`${dan} X ${num} = ${dan*num}`);
+    //   }
+    // }
+
+    //  for(let i = 1; i<=3; i++) {
+    //    for(let j = 1; j<=3; j++) {
+
+    //      console.log(`${i}-${j}`);
+    //    }
+
+    // }
+
+
+    // for(let i = 0; i < 10; i++){
+    //   if(i === 5) {break;}
+    //   if(i%2 ===0) {continue;}
+    //   console.log(i);      
+    // }
+    // const fruits= ["사과", "바나나","용과", "포도"];
+    // for ( const item of fruits) {
+    //   console.log(item);
+    // }
+
+    // const student = {name: "홍길동", age:25};
+    // for( const key in student){
+    //   console.log(key, student[key]);
+    // }
 
   </script>
   

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+<script>
+  function hi(name, func){
+    const msg = `안녕, ${name}님 반값습니다.!`;
+    func(msg);
+  }
+
+  const userlog = function(msg){
+    console.log(msg);
+  }
+
+  const userError = (msg) => {
+    console.error(msg);
+  }
+
+  hi("홍길동", (msg)=>console.warn(msg));
+
+
+
+// {
+//   let globalVar = "전역";
+//   function test(){
+//     let localVar = "지역";
+//     console.log(globalVar);
+//   }
+//   test();
+//   try {
+//     console.log(localVar);
+//   } catch(error) {
+//     console.error("에러발생 => "+error.name + " : " + error.message);
+//   }
+// } 
+// function greet(name){
+//   return `안녕, ${name} ^^`;
+// }
+
+// const greet2 = function(name){
+//   return `안녕, ${name} ^^`;
+// }
+
+// const greet3 = (name) => `안녕, ${name} ^^`;
+
+// let msg = greet("홍길동");
+// console.log(msg);
+
+// msg = greet2("임꺽정");
+// console.log(msg);
+
+// msg = greet3("장길산");
+// console.log(msg);
+
+</script>  
+</body>
+</html>
