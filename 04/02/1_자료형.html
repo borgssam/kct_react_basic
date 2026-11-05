@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+</body>
+
+<script>
+
+
+// ===== 삼항 연산자와 단축 평가 =====
+{
+  let age = 20;
+  let result = age >= 18 ? "성인" : "미성년자"; // 조건 ? 참일때 : 거짓일때
+
+  let userName = ""; // 사용자가 이름을 입력하지 않은 상황
+  let name2 = userName || "익명"; // userName이 falsy(빈 문자열 등)면 "익명" 사용
+  console.log(result, name2);
+}
+
+
+</script>
+
+</html>

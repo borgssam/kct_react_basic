@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+            body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f2f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        /* 카드형 컨테이너 디자인 */
+        .calculator-card {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            width: 350px;
+            text-align: center;
+        }
+
+        h2 {
+            color: #333333;
+            margin-bottom: 20px;
+        }
+        
+        /* 입력 폼 영역 */
+        .input-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #555555;
+            font-weight: 600;
+        }
+        
+        input[type="number"] {
+            width: 80%;
+            padding: 10px;
+            font-size: 16px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            text-align: center;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+
+        input[type="number"]:focus {
+            border-color: #4a90e2;
+        }
+
+        /* 버튼 디자인 */
+        button {
+            background-color: #4a90e2;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 8px;
+            cursor: pointer;
+            width: 100%;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #357abd;
+        }
+        
+        /* 결과 출력 박스 */
+        .result-box {
+            margin-top: 25px;
+            padding: 15px;
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            border-left: 5px solid #4a90e2;
+            font-size: 16px;
+            color: #333333;
+            min-height: 24px;
+            text-align: left;
+            word-break: keep-all;
+        }
+
+  </style>
+</head>
+<body>
+  <div class="calulator-card">
+    <h2>🎢 놀이공원 입장료 계산기</h2>
+    <div class="input-group">
+      <label for="">나이를 입력하세요</label>
+      <input type="number" id="ageInput" placeholder="예) 25" min = "0" max = "150"/>
+      <button class="btn" onclick="calculateFee()">입장료 계산</button>
+
+      <div class="result-box" id="resultDisplay">
+      나이를 입력하고 버튼을 누르세요</div>
+    </div>
+  </div>
+
+  <script>
+    function calculateFee() {
+      const ageInput = document.getElementById("ageInput").value;
+
+      const age = Number(ageInput);
+      // alert(`입력받은 나이는 ${age}입니다`);
+
+      if (age < 8 && age > 0) {
+        message = "어린이는 무료입니다.";
+      } else if(age <= 19 && age > 0) {
+        message =" 청소년은 7,000원입니다.";
+      } else if(age <= 64 && age > 0) {
+        message = "성인은 10,000원입니다.";
+      } else if (age>=65 && age > 0){
+        message = "경로자는 5,000원입니다.";
+      } else {
+        message ="입력값이 잘못 됬습니다.";
+      }
+      const resultDisplay = document.getElementById("resultDisplay");
+
+      resultDisplay.innerText = message;
+
+
+
+    }
+
+  </script>
+  
+</body>
+</html>
