@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+<script>
+
+//객체 생성과 속성 접근 ================
+const user = {
+  name:"홍길동",
+  age:25,
+  setAge(newAge){
+    this.age = newAge;
+  },
+  greet(){
+    console.log(`안녕, 난 ${this.name} 입니다.나이는 ${this.age}살입니다..`);
+  },
+};
+
+// const name2 = user.name;
+// const age2  = user.age;
+// console.log( name2, age2);
+
+// const {age, name} = user;
+// console.log(name, age);
+
+const user2 = user;
+user2.setAge(30);
+console.log(user.age);
+
+const user3 = {...user, age:33};
+// user3.setAge(50);
+console.log(user3.age);
+
+
+// const user = {
+//   name:"홍길동",
+//   age:25,
+//   setAge(newAge){
+//     this.age = newAge;
+//   },
+//   greet(){
+//     console.log(`안녕, 난 ${this.name} 입니다.나이는 ${this.age}살입니다..`);
+//   },
+// };
+
+// console.log(user.name);
+// console.log(user["age"]);
+// console.log(user);
+// user.greet();
+// user.setAge(26);
+// user.greet();
+
+// some, every, reduce ------------------
+// const scores = [85,92,68,95];
+// let result = [];
+//모든 숫자의 합을 구하시오
+// let sum = 0;
+// for(let idx = 0; idx< scores.length; idx++) {
+//   sum += scores[idx];
+// }
+// result[0] = sum;
+
+// result[0] = scores.reduce((acc, cur) => acc + cur, 0);
+
+
+//모두참이면(60점이상)
+// for(let idx = 0; idx< scores.length; idx++) {
+//   if(scores[idx] >= 70) {
+//     result[0] = true;
+//   } else {
+//     result[0] = false; break;
+//   }
+// }
+// result[0] = scores.every((s) => s>=69);
+
+//하나라도 참이면( 90점이상이 있으면)
+// for(let idx = 0; idx< scores.length; idx++) {
+//   if(scores[idx] >= 90) {
+//     result[0] = true; break;
+//   } else {
+//     result[0] = false;
+//   }
+// }
+// result[0]= scores.some((s) => s >= 99);
+
+//결과보기
+// for(score of result) {
+//   console.log(score);
+// }
+
+// map,filter, find ---------------------
+// const scores = [85,92,68,95];
+// let result = []
+// // 조건 맞는 첫번째 값을 구하기
+// for(let idx=0; idx<=scores.length; idx++) {
+//   if(scores[idx] >= 90) {
+//     result2.push(scores[idx]);
+//     break;
+//   }
+// }
+//result[0] = scores.find((s) => s>=90);
+
+// 합격자 목록구하기 (80점이상이 합격)
+// for(let idx=0; idx<scores.length; idx++) {
+//   if(scores[idx] >= 80) {
+//     result.push(scores[idx]);
+//   }
+// }
+// result = scores.filter((s) => s>=80);
+
+// 배열요소의 값을  2배로 늘리기 -
+// for(let idx = 0; idx< scores.length; idx++) {
+//   scores[idx] = scores[idx]* 2;
+// }
+// let result = scores.map((score)=>score*2);
+// //결과보기
+// for(score of result) {
+//   console.log(score);
+// }
+
+
+
+// 배열 생성과 요소접근 -------------------
+// let fruits = ["사과","바나나", "포도"];
+// fruits.push("딸기");
+// fruits.unshift("수박");
+// fruits[1]="오렌지";
+// fruits.pop();
+// fruits.splice(1,2);
+
+// console.log(fruits.length);
+// for(let idx = 0; idx< fruits.length; idx++) {
+//   console.log(`${idx}번째 요소: ${fruits[idx]}`);
+// }
+
+
+
+</script>
+  
+</body>
+</html>
